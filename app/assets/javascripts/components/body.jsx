@@ -1,10 +1,8 @@
-
-var Main = React.createClass({
+var Body = React.createClass({
     render() {
         return (
             <div>
-                <Header />
-                <Body />
+                <AllDogs />
             </div>
         )
     }

@@ -5,3 +5,7 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+names = ["Fido","Barney","Roger","Coco","Darth","Oscar","Eric","Jess",]
+wags = (1..100).to_a
+
+10.times { Dog.create!(name: names.sample, tail_wag_rate: wags.sample)}
