@@ -1,9 +1,8 @@
-var Body = React.createClass({
+var NewDog= React.createClass({
     render() {
         return (
             <div>
-              <NewDog />
-              <AllDogs />
+                <h1>New Dog</h1>
             </div>
         )
     }
