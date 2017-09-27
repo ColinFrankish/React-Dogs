@@ -8,7 +8,7 @@ var AllDogs = React.createClass({
   },
 
   render() {
-
+    console.log(this.state)
     var dogs = this.state.dogs.map((dog) => {
         return (
             <div key={dog.id}>
