@@ -44,4 +44,3 @@ class NewDog extends React.Component {
   }
 };
 
-// module.exports = NewDog;

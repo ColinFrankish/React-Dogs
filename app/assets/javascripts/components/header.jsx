@@ -8,4 +8,3 @@ class Header extends React.Component {
   }
 };
 
-module.exports = Header;

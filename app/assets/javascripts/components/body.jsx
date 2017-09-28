@@ -9,4 +9,3 @@ class Body extends React.Component {
   }
 };
 
-module.exports = Body;

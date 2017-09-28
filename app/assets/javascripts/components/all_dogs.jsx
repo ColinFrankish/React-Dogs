@@ -1,11 +1,13 @@
 class AllDogs extends React.Component {
-  getInitialState() {
-    return { dogs: [] }
-  },
+    constructor(props) {
+    super(props);
+    this.state =  { dogs: [],
+                  };
+  }
 
   componentDidMount() {
     $.getJSON('/api/v1/dogs.json', (response) => { this.setState({ dogs: response }) });
-  },
+  }
 
   render() {
     console.log(this.state)
@@ -27,4 +29,3 @@ class AllDogs extends React.Component {
   }
 };
 
-module.exports = AllDogs;
