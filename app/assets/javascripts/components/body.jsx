@@ -2,9 +2,8 @@ var Body = React.createClass({
     render() {
         return (
             <div>
-              
-              <AllDogs />
               <NewDog />
+              <AllDogs />
             </div>
         )
     }
