@@ -25,23 +25,23 @@ class NewDog extends React.Component {
 
   render() {
     console.log(this.state)
-      return (
-        <div>
-          <form onSubmit={this.handleSubmit}>
-            <h1>New Dog</h1>
-            <input  type="text"
-                    value={this.state.name}
-                    onChange={this.handleNameChange}
-                    placeholder='Enter the name of the canine' /><br/>
-            <input  type="number"
-                    value={this.state.tailWagRate}
-                    onChange={this.handleTailWagRateChange}
-                    placeholder='Enter a wag rate between 1-100' /><br/>
-            <input  type="submit" value="Submit" />
-          </form>
-        </div>
-      )
-    }
+    return (
+      <div>
+        <form onSubmit={this.handleSubmit}>
+          <h1>New Dog</h1>
+          <input  type="text"
+                  value={this.state.name}
+                  onChange={this.handleNameChange}
+                  placeholder='Enter the name of the canine' /><br/>
+          <input  type="number"
+                  value={this.state.tailWagRate}
+                  onChange={this.handleTailWagRateChange}
+                  placeholder='Enter a wag rate between 1-100' /><br/>
+          <input  type="submit" value="Submit" />
+        </form>
+      </div>
+    )
+  }
 };
 
 // module.exports = NewDog;
