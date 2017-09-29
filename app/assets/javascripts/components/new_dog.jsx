@@ -20,7 +20,17 @@ class NewDog extends React.Component {
 
 
   handleSubmit(event) {
-    alert("you have would have subitted if this did anything")
+    var name    = this.state.name
+    var tailWagRate = this.state.tailWagRate
+    $.ajax({
+        url: '/api/v1/dogs',
+        type: 'POST',
+        data: { dog: { name: name, tail_wag_rate: tailWagRate } },
+        success: (response) => {
+            alert('We saved the dog! See the hound in your list')
+        }
+    });
+
   }
 
   render() {
