@@ -1,39 +1,22 @@
 class AllDogs extends React.Component {
     constructor(props) {
     super(props);
-    this.state =  { dogs: [],
+    this.state =  { 
                   };
   }
 
-  componentDidMount() {
-    $.getJSON('/api/v1/dogs.json', (response) => { this.setState({ dogs: response }) });
-  }
-
-  handleDeleteDog(dog_id, name) {
-    console.log("Dog ID", dog_id)
-    let deletedDogID = dog_id
-    $.ajax({
-      url: `api/v1/dogs/${dog_id}`,
-      type: 'DELETE',
-      success (response) {
-        alert(`${name} has been destroyed!!` )
-      }
-    })
-  }
-
-
   render() {
-    console.log(this.state)
-    let dogs = this.state.dogs.map((dog) => {
+
+    let dogs = this.props.allDogs.map((dog) => {
       return (
         <div key={dog.id}>
           <h3>Name: {dog.name}</h3>
           <p>Wag Rate: {dog.tail_wag_rate}</p>
-          <button onClick={this.handleDeleteDog.bind(this, dog.id, dog.name)}>Destroy {dog.name} !</button>
+          <button onClick={this.props.handleDeleteDog.bind(this, dog.id, dog.name)}>Destroy {dog.name} !</button>
         </div>
       )
     });
-
+    console.log(this.props)
     return(
       <div>
           <h2>All Dogs. Yes. All The Dogs</h2>
